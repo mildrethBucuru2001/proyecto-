@@ -1,0 +1,25 @@
+<!-- templates/base.html-->
+{% load static %}
+<html>
+	<head> 
+		<title>EXPERIENCIAS DE VIAJE</title>
+			<link href="https://fonts.googleapis.com/css?family=\
+			Source+Sans+Pro:400" rel="stylesheet">
+			<link href="{% static 'css/base.css' %}" rel="stylesheet">		
+	</head>
+	<body class="fondo">
+    <img class="img1" src="{% static 'img/viaje.jpg' %}" >
+	<div>
+		<header>
+			<div class="nav-left">
+				<h1 class="titulo"> <a href="{% url 'home'%}">EXPERIENCIAS DE VIAJE</a></h1>
+			</div>
+		<div class="nav-right">
+			<a class="titulo3" href="{% url 'post_new' %}">+ Registra tu experiencia </a>
+		</div>
+		</header>
+		{% block content %}
+		{% endblock content %}
+	</div>
+	</body>
+</html>
